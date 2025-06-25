@@ -3,28 +3,13 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-const manifestoStatements = [
-  {
-    key: 'manifesto.line1'
-  },
-  {
-    key: 'manifesto.line2'
-  },
-  {
-    key: 'manifesto.line3'
-  },
-  {
-    key: 'manifesto.line4'
-  }
-];
-
 export const Manifesto = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="bg-[#0f0f0f] text-[#eee3d0] py-20 px-6">
+    <section className="bg-[#103237] text-[#eee3d0] py-20 px-6">
       <div className="max-w-2xl mx-auto text-lg space-y-3">
-        {manifestoStatements.map((statement, index) => (
+        {Array.from({ length: 4 }).map((_, index) => (
           <motion.p
             key={index}
             initial={{ opacity: 0, x: -30 }}
@@ -33,7 +18,7 @@ export const Manifesto = () => {
             viewport={{ once: true }}
             className="font-medium text-[#eee3d0]"
           >
-            {`✺ ${t(statement.key)}`}
+            {`✺ ${t(`manifesto.line${index + 1}`)}`}
           </motion.p>
         ))}
       </div>

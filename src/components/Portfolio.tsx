@@ -2,43 +2,50 @@
 
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
+import Image from 'next/image';
+import proyectoGarage from '@/assets/portfolio-images/proyecto-garage.png';
+import conectArte from '@/assets/portfolio-images/conect-arte.png';
+import neuroZine from '@/assets/portfolio-images/neuro-zine.png';
+import barrioBazar from '@/assets/portfolio-images/barrio-bazar.png';
+import algoRythm from '@/assets/portfolio-images/algo-rythm.png';
+import myLearningDNA from '@/assets/portfolio-images/my-learning-dna.png';
 
 const projects = [
   {
     titleKey: 'portfolio.project.garage.title',
     descriptionKey: 'portfolio.project.garage.description',
     technologies: 'Next.js · Tailwind · React Icons · IA',
-    image: '/project-garage.jpg',
+    image: proyectoGarage,
   },
   {
     titleKey: 'portfolio.project.cultural.title',
     descriptionKey: 'portfolio.project.cultural.description',
     technologies: 'React Native · Firebase · Stripe',
-    image: '/project-cultural.jpg',
+    image: conectArte,
   },
   {
     titleKey: 'portfolio.project.zine.title',
     descriptionKey: 'portfolio.project.zine.description',
     technologies: 'Framer Motion · Three.js · GSAP',
-    image: '/project-zine.jpg',
+    image: neuroZine,
   },
   {
     titleKey: 'portfolio.project.marketplace.title',
     descriptionKey: 'portfolio.project.marketplace.description',
     technologies: 'Next.js · Prisma · PostgreSQL',
-    image: '/project-marketplace.jpg',
+    image: barrioBazar,
   },
   {
     titleKey: 'portfolio.project.music.title',
     descriptionKey: 'portfolio.project.music.description',
     technologies: 'React · Node.js · MongoDB',
-    image: '/project-music.jpg',
+    image: algoRythm,
   },
   {
     titleKey: 'portfolio.project.education.title',
     descriptionKey: 'portfolio.project.education.description',
     technologies: 'Vue.js · Python · Redis',
-    image: '/project-education.jpg',
+    image: myLearningDNA,
   },
 ];
 
@@ -68,10 +75,20 @@ export const Portfolio = () => {
               viewport={{ once: true }}
               className="bg-white rounded-xl shadow p-4 hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="bg-gray-200 rounded-xl mb-4 h-48 flex items-center justify-center">
-                <span className="text-gray-500 text-sm">
-                  {t('portfolio.image.placeholder')}
-                </span>
+              <div className="bg-gray-200 rounded-xl mb-4 h-48 flex items-center justify-center overflow-hidden">
+                {project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={t(project.titleKey)}
+                    width={300}
+                    height={300}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <span className="text-gray-500 text-sm">
+                    {t('portfolio.image.placeholder')}
+                  </span>
+                )}
               </div>
               <h3 className="text-xl font-semibold mb-1 text-[#dc3925]">
                 {t(project.titleKey)}
