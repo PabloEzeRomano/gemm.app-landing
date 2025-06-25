@@ -3,49 +3,43 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Image from 'next/image';
-import proyectoGarage from '@/assets/portfolio-images/proyecto-garage.png';
-import conectArte from '@/assets/portfolio-images/conect-arte.png';
-import neuroZine from '@/assets/portfolio-images/neuro-zine.png';
-import barrioBazar from '@/assets/portfolio-images/barrio-bazar.png';
-import algoRythm from '@/assets/portfolio-images/algo-rythm.png';
-import myLearningDNA from '@/assets/portfolio-images/my-learning-dna.png';
 
 const projects = [
   {
     titleKey: 'portfolio.project.garage.title',
     descriptionKey: 'portfolio.project.garage.description',
     technologies: 'Next.js · Tailwind · React Icons · IA',
-    image: proyectoGarage,
+    image: '/proyecto-garage.png',
   },
   {
     titleKey: 'portfolio.project.cultural.title',
     descriptionKey: 'portfolio.project.cultural.description',
     technologies: 'React Native · Firebase · Stripe',
-    image: conectArte,
+    image: '/conect-arte.png',
   },
   {
     titleKey: 'portfolio.project.zine.title',
     descriptionKey: 'portfolio.project.zine.description',
     technologies: 'Framer Motion · Three.js · GSAP',
-    image: neuroZine,
+    image: '/neuro-zine.png',
   },
   {
     titleKey: 'portfolio.project.marketplace.title',
     descriptionKey: 'portfolio.project.marketplace.description',
     technologies: 'Next.js · Prisma · PostgreSQL',
-    image: barrioBazar,
+    image: '/barrio-bazar.png',
   },
   {
     titleKey: 'portfolio.project.music.title',
     descriptionKey: 'portfolio.project.music.description',
     technologies: 'React · Node.js · MongoDB',
-    image: algoRythm,
+    image: '/algo-rythm.png',
   },
   {
     titleKey: 'portfolio.project.education.title',
     descriptionKey: 'portfolio.project.education.description',
     technologies: 'Vue.js · Python · Redis',
-    image: myLearningDNA,
+    image: '/my-learning-dna.png',
   },
 ];
 
