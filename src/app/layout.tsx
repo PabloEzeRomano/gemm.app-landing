@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Space_Grotesk } from 'next/font/google';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import './globals.css';
-import { Navbar } from '@/components';
+import { Navbar, FloatingWhatsApp } from '@/components';
 
 const spaceGrotesk = Space_Grotesk({
   variable: '--font-space-grotesk',
@@ -11,7 +11,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'gemm.apps - Creative App Designer',
+  title: 'gemm-apps - Creative App Designer',
   description:
     'Prototipo experiencias digitales con identidad propia, narrativas únicas y estética pensada.',
 };
@@ -27,6 +27,7 @@ export default function RootLayout({
         <LanguageProvider>
           <Navbar />
           {children}
+          <FloatingWhatsApp />
         </LanguageProvider>
       </body>
     </html>

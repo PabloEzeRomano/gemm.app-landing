@@ -15,10 +15,13 @@ export const WhatIDo = () => {
         viewport={{ once: true }}
         className="max-w-3xl mx-auto text-lg space-y-4"
       >
-        <p>{t('whatido.line1')}</p>
-        <p>{t('whatido.line2')}</p>
-        <p>{t('whatido.line3')}</p>
+        <p className="text-3xl text-[#dc3925] font-bold">
+          {t('whatido.line1')}
+        </p>
+        <p className="text-xl text-left">{t('whatido.line1.2')}</p>
+        <p className="text-left">{t('whatido.line2')}</p>
+        <p className="text-left">{t('whatido.line3')}</p>
       </motion.div>
     </section>
   );
-}
+};

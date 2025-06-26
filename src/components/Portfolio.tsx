@@ -9,37 +9,37 @@ const projects = [
     titleKey: 'portfolio.project.garage.title',
     descriptionKey: 'portfolio.project.garage.description',
     technologies: 'Next.js · Tailwind · React Icons · IA',
-    image: '/proyecto-garage.png',
+    image: 'proyecto-garage.png',
   },
   {
     titleKey: 'portfolio.project.cultural.title',
     descriptionKey: 'portfolio.project.cultural.description',
     technologies: 'React Native · Firebase · Stripe',
-    image: '/conect-arte.png',
+    image: 'conect-arte.png',
   },
   {
     titleKey: 'portfolio.project.zine.title',
     descriptionKey: 'portfolio.project.zine.description',
     technologies: 'Framer Motion · Three.js · GSAP',
-    image: '/neuro-zine.png',
+    image: 'neuro-zine.png',
   },
   {
     titleKey: 'portfolio.project.marketplace.title',
     descriptionKey: 'portfolio.project.marketplace.description',
     technologies: 'Next.js · Prisma · PostgreSQL',
-    image: '/barrio-bazar.png',
+    image: 'barrio-bazar.png',
   },
   {
     titleKey: 'portfolio.project.music.title',
     descriptionKey: 'portfolio.project.music.description',
     technologies: 'React · Node.js · MongoDB',
-    image: '/algo-rythm.png',
+    image: 'algo-rythm.png',
   },
   {
     titleKey: 'portfolio.project.education.title',
     descriptionKey: 'portfolio.project.education.description',
     technologies: 'Vue.js · Python · Redis',
-    image: '/my-learning-dna.png',
+    image: 'my-learning-dna.png',
   },
 ];
 
@@ -72,7 +72,7 @@ export const Portfolio = () => {
               <div className="bg-gray-200 rounded-xl mb-4 h-48 flex items-center justify-center overflow-hidden">
                 {project.image ? (
                   <Image
-                    src={project.image}
+                    src={`/portfolio/${project.image}`}
                     alt={t(project.titleKey)}
                     width={300}
                     height={300}
