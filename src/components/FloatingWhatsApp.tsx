@@ -1,15 +1,14 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { handleWhatsAppClick } from '@/utils/whatsapp';
 
 export const FloatingWhatsApp = () => {
-  const handleWhatsAppClick = () => {
-    const phoneNumber = '+5491122550533';
-    const message = 'Hola! Me gustaría contactarte sobre tu trabajo.';
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-      message
-    )}`;
-    window.open(whatsappUrl, '_blank');
+  const { t } = useLanguage();
+
+  const handleClick = () => {
+    handleWhatsAppClick(t('whatsapp.message'));
   };
 
   return (
@@ -22,7 +21,7 @@ export const FloatingWhatsApp = () => {
       <motion.button
         whileHover={{ scale: 1.15 }}
         whileTap={{ scale: 0.95 }}
-        onClick={handleWhatsAppClick}
+        onClick={handleClick}
         className="bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg cursor-pointer transition-all duration-300"
         aria-label="Contactar por WhatsApp"
       >
