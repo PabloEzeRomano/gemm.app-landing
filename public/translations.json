@@ -14,7 +14,7 @@
     "services.prototype.description": "Transformo tus ideas en prototipos reales con diseño visual potente.",
     "services.concept.title": "Conceptualización de apps",
     "services.concept.description": "Definimos juntos la esencia de tu app antes de desarrollarla.",
-    "services.direction.title": "Dirección de producto cultural",
+    "services.direction.title": "Dirección de producto",
     "services.direction.description": "Acompaño proyectos que quieren lanzar productos digitales con alma y propósito.",
     "about.title": "Sobre mí",
     "about.paragraph1": "Soy desarrollador y arquitecto de software con más de 10 años de experiencia construyendo productos digitales escalables. Durante años trabajé en fintechs, liderando equipos y optimizando sistemas complejos.",
@@ -40,7 +40,13 @@
     "manifesto.line3": "Jugar, explorar y divertirme: ahí es donde más brillo.",
     "manifesto.line4": "La estética también es una forma de verdad.",
     "contact.title": "¿Tenes un idea para una app con alma?",
-    "contact.button": "Escribime"
+    "contact.button": "Escribime",
+    "footer.description": "Desarrollo apps con alma para ideas con voz propia.",
+    "footer.quickLinks": "Enlaces rápidos",
+    "services.title": "Servicios",
+    "footer.contact": "Contacto",
+    "footer.rights": "Todos los derechos reservados.",
+    "whatsapp.message": "Hola! Me gustaría contactarte sobre tu trabajo."
   },
   "en": {
     "hero.title": "I'm Pablo Romano",
@@ -57,7 +63,7 @@
     "services.prototype.description": "I turn your ideas into real prototypes with bold visual design.",
     "services.concept.title": "App conceptualization",
     "services.concept.description": "We define your app’s essence together, before we build it.",
-    "services.direction.title": "Cultural product direction",
+    "services.direction.title": "Product direction",
     "services.direction.description": "I guide projects looking to launch digital products with soul.",
     "about.title": "About me",
     "about.paragraph1": "I am a developer and software architect with more than 10 years of experience building scalable digital products. For years I worked in fintechs, leading teams and optimizing complex systems.",
@@ -83,6 +89,12 @@
     "manifesto.line3": "Play, exploration, and fun. That’s where I let myself shine.",
     "manifesto.line4": "Aesthetics is also a form of truth.",
     "contact.title": "Got an idea for an app with soul?",
-    "contact.button": "Write me"
+    "contact.button": "Write me",
+    "footer.description": "I develop apps with soul for ideas that want to be heard.",
+    "footer.quickLinks": "Quick links",
+    "services.title": "Services",
+    "footer.contact": "Contact",
+    "footer.rights": "All rights reserved.",
+    "whatsapp.message": "Hello! I'd like to contact you about your work."
   }
 }
