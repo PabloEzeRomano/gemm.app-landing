@@ -7,7 +7,7 @@ export const Contact = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="contacto" className="py-20 px-6 text-center">
+    <section id="contacto" className="py-20 px-6 text-center bg-[#103237]">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

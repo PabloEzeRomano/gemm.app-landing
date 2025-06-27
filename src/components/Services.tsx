@@ -5,20 +5,20 @@ import { useLanguage } from '@/contexts/LanguageContext';
 
 const services = [
   {
-    titleKey: 'services.prototype.title',
-    descriptionKey: 'services.prototype.description',
-    color: "text-[#dc3925]"
-  },
-  {
     titleKey: 'services.concept.title',
     descriptionKey: 'services.concept.description',
-    color: "text-[#103237]"
+    color: 'text-[#dc3925]',
+  },
+  {
+    titleKey: 'services.prototype.title',
+    descriptionKey: 'services.prototype.description',
+    color: 'text-[#103237]',
   },
   {
     titleKey: 'services.direction.title',
     descriptionKey: 'services.direction.description',
-    color: "text-[#b3dc75]"
-  }
+    color: 'text-[#b3dc75]',
+  },
 ];
 
 export const Services = () => {
@@ -36,11 +36,13 @@ export const Services = () => {
             viewport={{ once: true }}
             className="bg-[#ffffff] p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
-            <h3 className={`text-xl font-semibold mb-2 ${service.color}`}>{t(service.titleKey)}</h3>
+            <h3 className={`text-xl font-semibold mb-2 ${service.color}`}>
+              {t(service.titleKey)}
+            </h3>
             <p className="text-gray-700">{t(service.descriptionKey)}</p>
           </motion.div>
         ))}
       </div>
     </section>
   );
-}
+};

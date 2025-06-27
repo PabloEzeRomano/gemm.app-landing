@@ -47,14 +47,14 @@ export const Portfolio = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="portfolio" className="bg-[#eee3d0] py-20 px-6">
+    <section id="portfolio" className="bg-[#103237] py-20 px-6 min-h-screen">
       <div className="max-w-6xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-3xl font-bold mb-10 text-center text-[#103237]"
+          className="text-3xl font-bold mb-10 text-center text-[#dc3925]"
         >
           {t('portfolio.title')}
         </motion.h2>
@@ -67,7 +67,8 @@ export const Portfolio = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl shadow p-4 hover:shadow-xl transition-shadow duration-300"
+              // whileHover={{ scale: 1.1 }}
+              className="bg-[#f2efe9] rounded-xl shadow p-4 hover:shadow-xl transition-shadow duration-300"
             >
               <div className="bg-gray-200 rounded-xl mb-4 h-48 flex items-center justify-center overflow-hidden">
                 {project.image ? (
