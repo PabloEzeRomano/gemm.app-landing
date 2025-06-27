@@ -127,12 +127,12 @@ export const Footer = () => {
                   href={`mailto:${email}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-gray-300 transition-colors"
+                  className="text-[#dc3925] hover:text-[#e36050] transition-colors"
                   aria-label="Email"
                 >
                   <svg
                     className="w-6 h-6"
-                    fill="#dc4234"
+                    fill="currentColor"
                     viewBox="0 0 600 600"
                   >
                     <path d="M132.5 39.8c-80.8 0-147.1 66.4-147.1 147.2v231.3c0 80.8 66.3 147.2 147.1 147.2h336.2c80.8 0 147.1-66.4 147.1-147.2V187c0-80.8-66.3-147.2-147.1-147.2zm0 84.1h336.2c35.6 0 63 27.4 63 63.1v231.3c0 35.7-27.4 63.1-63 63.1H132.5c-35.6 0-63-27.4-63-63.1V187c0-35.7 27.4-63.1 63-63.1z"/>
