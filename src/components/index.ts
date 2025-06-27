@@ -1,5 +1,7 @@
+export { AboutMe } from './AboutMe';
 export { Contact } from './Contact';
 export { FloatingWhatsApp } from './FloatingWhatsApp';
+export { Footer } from './Footer';
 export { Hero } from './Hero';
 export { Manifesto } from './Manifesto';
 export { Navbar } from './Navbar';

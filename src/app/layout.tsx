@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Space_Grotesk } from 'next/font/google';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import './globals.css';
-import { Navbar, FloatingWhatsApp } from '@/components';
+import { Navbar, FloatingWhatsApp, Footer } from '@/components';
 
 const spaceGrotesk = Space_Grotesk({
   variable: '--font-space-grotesk',
@@ -27,6 +27,7 @@ export default function RootLayout({
         <LanguageProvider>
           <Navbar />
           {children}
+          <Footer />
           <FloatingWhatsApp />
         </LanguageProvider>
       </body>

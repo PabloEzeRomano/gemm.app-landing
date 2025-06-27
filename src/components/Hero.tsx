@@ -32,56 +32,26 @@ export const Hero = () => {
       >
         {t('hero.subtitle2')}
       </motion.p>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        className="space-x-4"
+      >
+        <a
+          href="#portfolio"
+          className="bg-[#0f0f0f] text-[#eee3d0] px-6 py-3 rounded-2xl text-lg hover:bg-[#dc3925] transition-colors duration-300 inline-block"
+        >
+          {t('hero.portfolio')}
+        </a>
 
-      <div className="max-w-3xl text-lg space-y-6 py-10">
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-3xl font-bold text-[#dc3925] mb-4"
+        <a
+          href="#contacto"
+          className="border-2 border-[#0f0f0f] px-6 py-3 rounded-2xl text-lg hover:bg-[#0f0f0f] hover:text-[#eee3d0] transition-colors duration-300 inline-block"
         >
-          {t('about.title')}
-        </motion.h2>
-
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
-          {t('about.paragraph1')}
-        </motion.p>
-
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-        >
-          {t('about.paragraph2')}
-        </motion.p>
-
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
-        >
-          {t('about.paragraph3')}
-        </motion.p>
-        <motion.a
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          href="/resume/Pablo-Romano-Resume.pdf"
-          download
-          className="inline-block bg-[#b3dc75]/70 text-[#0f0f0f] px-8 py-4 rounded-2xl text-lg font-bold  hover:bg-[#b3dc75] transition-colors duration-300"
-          whileHover={{ scale: 1.05 }}
-        >
-          {t('about.experience.download')}
-        </motion.a>
-      </div>
+          {t('hero.contact')}
+        </a>
+      </motion.div>
     </section>
   );
 };
