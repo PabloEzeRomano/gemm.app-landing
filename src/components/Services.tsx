@@ -25,7 +25,7 @@ export const Services = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-20 px-6">
+    <section id="services" className="py-20 px-6">
       <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 text-center">
         {services.map((service, index) => (
           <motion.div

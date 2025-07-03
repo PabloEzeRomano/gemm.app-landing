@@ -3,12 +3,15 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { handleWhatsAppClick } from '@/utils/whatsapp';
+import { usePathname } from 'next/navigation';
 
 export const FloatingWhatsApp = () => {
   const { t } = useLanguage();
+  const pathname = usePathname();
+  const isResumePage = pathname === '/resume';
 
   const handleClick = () => {
-    handleWhatsAppClick(t('whatsapp.message'));
+    handleWhatsAppClick(t(`${isResumePage ? 'resume.contact.whatsappMessage' : 'whatsapp.message'}`));
   };
 
   return (

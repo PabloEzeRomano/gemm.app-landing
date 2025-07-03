@@ -7,7 +7,7 @@ export const WhatIDo = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="bg-[#103237] text-[#eee3d0] pt-20 px-6 text-center">
+    <section id="whatido" className="bg-[#103237] text-[#eee3d0] pt-20 px-6 text-center">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

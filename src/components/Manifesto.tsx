@@ -7,7 +7,7 @@ export const Manifesto = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="bg-[#103237] text-[#eee3d0] py-20 px-6">
+    <section id="manifesto" className="bg-[#103237] text-[#eee3d0] py-20 px-6">
       <div className="max-w-2xl mx-auto text-lg space-y-3">
         {Array.from({ length: 4 }).map((_, index) => (
           <motion.p

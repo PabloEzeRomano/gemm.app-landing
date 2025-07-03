@@ -7,7 +7,7 @@ export const Hero = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center px-6">
+    <section id="main" className="min-h-screen flex flex-col justify-center items-center px-6">
       <motion.h1
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
