@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Space_Grotesk } from 'next/font/google';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import './globals.css';
-import { Navbar, FloatingWhatsApp, Footer } from '@/components';
+import { FloatingWhatsApp } from '@/components';
 
 const spaceGrotesk = Space_Grotesk({
   variable: '--font-space-grotesk',
@@ -25,9 +25,7 @@ export default function RootLayout({
     <html lang="es">
       <body className={`${spaceGrotesk.variable} antialiased`}>
         <LanguageProvider>
-          <Navbar />
           {children}
-          <Footer />
           <FloatingWhatsApp />
         </LanguageProvider>
       </body>
