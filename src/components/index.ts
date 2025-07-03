@@ -7,4 +7,5 @@ export { Manifesto } from './Manifesto';
 export { Navbar } from './Navbar';
 export { Portfolio } from './Portfolio';
 export { Services } from './Services';
+export { Socials } from './Socials';
 export { WhatIDo } from './WhatIDo';
