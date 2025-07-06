@@ -7,7 +7,7 @@ export const Hero = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="main" className="min-h-screen flex flex-col justify-center items-center px-6">
+    <section id="main" className="bg-[#eee3d0] min-h-screen flex flex-col justify-center items-center px-6">
       <motion.h1
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -46,7 +46,7 @@ export const Hero = () => {
         </a>
 
         <a
-          href="#contacto"
+          href="#contact"
           className="border-2 border-[#0f0f0f] px-6 py-3 rounded-2xl text-lg hover:bg-[#0f0f0f] hover:text-[#eee3d0] transition-colors duration-300 inline-block"
         >
           {t('hero.contact')}
