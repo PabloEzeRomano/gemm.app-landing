@@ -1,5 +1,6 @@
 export { AboutMe } from './AboutMe';
 export { Contact } from './Contact';
+export { DynamicMetadata } from './DynamicMetadata';
 export { FloatingWhatsApp } from './FloatingWhatsApp';
 export { Footer } from './Footer';
 export { Hero } from './Hero';
