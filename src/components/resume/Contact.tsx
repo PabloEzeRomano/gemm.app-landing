@@ -1,31 +1,20 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useLanguage } from '../../contexts/LanguageContext';
-import { handleWhatsAppClick } from '../../utils/whatsapp';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { handleWhatsAppClick } from '@/utils/whatsapp';
+import { glowVariantsViolet } from '@/utils/glowVariants';
 
 export const Contact = () => {
   const { t } = useLanguage();
   const email = process.env.NEXT_PUBLIC_EMAIL;
-
-  const glowVariants = {
-    animate: {
-      opacity: 1,
-      y: 0,
-      textShadow: [
-        '0 0 10px #b48eff, 0 0 20px #b48eff, 0 0 30px #b48eff',
-        '0 0 20px #b48eff, 0 0 30px #b48eff, 0 0 40px #b48eff',
-        '0 0 10px #b48eff, 0 0 20px #b48eff, 0 0 30px #b48eff',
-      ],
-    },
-  };
 
   return (
     <section id="contact" className="py-16 px-6 bg-[#1a1a2e]">
       <div className="max-w-4xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
-          variants={glowVariants}
+          variants={glowVariantsViolet}
           animate="animate"
           transition={{
             duration: 0.8,
@@ -47,7 +36,18 @@ export const Contact = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-xl md:text-2xl text-[#64ffda] mb-6"
         >
-          {t('resume.contact.subtitle')}
+          {t('resume.contact.subtitle')}{' '}
+                      <motion.span
+              whileHover={{
+                scale: 1.5,
+                textShadow: "0 0 10px #64ffda, 0 0 20px #64ffda, 0 0 30px #64ffda"
+              }}
+              transition={{ duration: 0.5 }}
+              className="inline-block cursor-pointer hover:uppercase hover:rounded-md hover:px-2 hover:py-1"
+            >
+            {t('resume.contact.big')}
+          </motion.span>
+          ?
         </motion.h3>
         <motion.p
           initial={{ opacity: 0, y: 30 }}

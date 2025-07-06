@@ -4,23 +4,11 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Socials } from '@/components/Socials';
+import { glowVariantsViolet, glowVariantsGreen } from '@/utils/glowVariants';
 
 export const Footer = () => {
   const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
-
-  const glowVariants = {
-    animate: {
-      opacity: 1,
-      y: 0,
-      textShadow: [
-        '0 0 10px #b48eff, 0 0 20px #b48eff, 0 0 30px #b48eff',
-        '0 0 20px #b48eff, 0 0 30px #b48eff, 0 0 40px #b48eff',
-        '0 0 10px #b48eff, 0 0 20px #b48eff, 0 0 30px #b48eff',
-      ],
-    },
-  };
-
 
   return (
     <footer className="bg-[#0a0a14] border-t border-[#64ffda]/20 py-12 px-6">
@@ -35,7 +23,7 @@ export const Footer = () => {
             className="space-y-4"
           >
             <motion.h3
-              variants={glowVariants}
+              variants={glowVariantsViolet}
               animate="animate"
               transition={{
                 duration: 0.8,
@@ -71,7 +59,7 @@ export const Footer = () => {
             className="space-y-4"
           >
             <motion.h4
-              variants={glowVariants}
+              variants={glowVariantsGreen}
               animate="animate"
               transition={{
                 duration: 0.8,
@@ -104,14 +92,6 @@ export const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#projects"
-                  className="text-[#e0e0ff] hover:text-[#64ffda] transition-colors duration-300 text-sm"
-                >
-                  {t('resume.footer.projects')}
-                </a>
-              </li>
-              <li>
-                <a
                   href="#contact"
                   className="text-[#e0e0ff] hover:text-[#64ffda] transition-colors duration-300 text-sm"
                 >
@@ -130,7 +110,7 @@ export const Footer = () => {
             className="space-y-4"
           >
             <motion.h4
-              variants={glowVariants}
+              variants={glowVariantsGreen}
               animate="animate"
               transition={{
                 duration: 0.8,

@@ -1,31 +1,20 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useLanguage } from '../../contexts/LanguageContext';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { glowVariantsViolet } from '@/utils/glowVariants';
 
 export const Stack = () => {
   const { t } = useLanguage();
 
-  const glowVariants = {
-    animate: {
-      opacity: 1,
-      y: 0,
-      textShadow: [
-        '0 0 10px #b48eff, 0 0 20px #b48eff, 0 0 30px #b48eff',
-        '0 0 20px #b48eff, 0 0 30px #b48eff, 0 0 40px #b48eff',
-        '0 0 10px #b48eff, 0 0 20px #b48eff, 0 0 30px #b48eff',
-      ],
-    },
-  };
-
   const categories = [
     {
       name: t('resume.stack.frontend'),
-      technologies: ['React', 'Vue.js', 'TypeScript', 'Tailwind CSS', 'Next.js']
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js']
     },
     {
       name: t('resume.stack.backend'),
-      technologies: ['Node.js', 'Python', 'Laravel', 'PostgreSQL', 'Redis']
+      technologies: ['Node.js', 'Python', 'PostgreSQL', 'Redis']
     },
     {
       name: t('resume.stack.devops'),
@@ -33,7 +22,7 @@ export const Stack = () => {
     },
     {
       name: t('resume.stack.tools'),
-      technologies: ['Git', 'PostHog', 'Datadog', 'Figma', 'Jira', 'Slack']
+      technologies: ['Git', 'PostHog', 'Datadog', 'Figma', 'Jira']
     }
   ];
 
@@ -42,7 +31,7 @@ export const Stack = () => {
       <div className="max-w-4xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
-          variants={glowVariants}
+          variants={glowVariantsViolet}
           animate="animate"
           transition={{
             duration: 0.8,

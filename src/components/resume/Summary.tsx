@@ -1,22 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useLanguage } from '../../contexts/LanguageContext';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { glowVariantsViolet } from '@/utils/glowVariants';
 
 export const Summary = () => {
   const { t } = useLanguage();
-
-  const glowVariants = {
-    animate: {
-      opacity: 1,
-      y: 0,
-      textShadow: [
-        '0 0 10px #b48eff, 0 0 20px #b48eff, 0 0 30px #b48eff',
-        '0 0 20px #b48eff, 0 0 30px #b48eff, 0 0 40px #b48eff',
-        '0 0 10px #b48eff, 0 0 20px #b48eff, 0 0 30px #b48eff',
-      ],
-    },
-  };
 
   const summaryItems = [
     t('resume.summary.item1'),
@@ -30,15 +19,15 @@ export const Summary = () => {
       <div className="max-w-4xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
-          variants={glowVariants}
+          variants={glowVariantsViolet}
           animate="animate"
           transition={{
             duration: 0.8,
             textShadow: {
               duration: 2,
               repeat: Infinity,
-              ease: "easeInOut"
-            }
+              ease: 'easeInOut',
+            },
           }}
           className="text-3xl md:text-4xl font-bold text-[#b48eff] mb-8 text-center"
         >
@@ -46,8 +35,9 @@ export const Summary = () => {
         </motion.h2>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
           className="bg-[#1a1a2e] p-8 rounded-2xl"
         >
           {summaryItems.map((item, index) => (
