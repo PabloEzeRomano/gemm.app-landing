@@ -11,13 +11,21 @@ interface LanguageContextType {
   t: (key: string) => string;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+const LanguageContext = createContext<LanguageContextType | undefined>(
+  undefined
+);
 
-export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export const LanguageProvider: React.FC<{ children: ReactNode }> = ({
+  children,
+}) => {
   const [language, setLanguage] = useState<Language>('es');
 
   const t = (key: string): string => {
-    return translations[language][key as keyof typeof translations[typeof language]] || key;
+    return (
+      translations[language][
+        key as keyof (typeof translations)[typeof language]
+      ] || key
+    );
   };
 
   return (
