@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { handleWhatsAppClick } from '@/utils/whatsapp';
 import { usePathname } from 'next/navigation';
+import { trackContactAttempt } from '@/utils/posthog';
 
 export const FloatingWhatsApp = () => {
   const { t } = useLanguage();
@@ -11,6 +12,7 @@ export const FloatingWhatsApp = () => {
   const isResumePage = pathname === '/resume';
 
   const handleClick = () => {
+    trackContactAttempt('whatsapp');
     handleWhatsAppClick(t(`${isResumePage ? 'resume.contact.whatsappMessage' : 'whatsapp.message'}`));
   };
 

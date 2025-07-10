@@ -2,11 +2,14 @@
 
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { trackLanguageChange } from "@/utils/posthog";
 
 export const FloatingLanguage = () => {
   const { language, setLanguage } = useLanguage();
   const toggleLanguage = () => {
-    setLanguage(language === "es" ? "en" : "es");
+    const newLanguage = language === "es" ? "en" : "es";
+    trackLanguageChange(language, newLanguage);
+    setLanguage(newLanguage);
   };
 
   return (

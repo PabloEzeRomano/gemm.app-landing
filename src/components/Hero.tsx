@@ -1,10 +1,17 @@
 'use client';
 
+import React from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { trackButtonClick, trackSectionView } from '@/utils/posthog';
 
 export const Hero = () => {
   const { t } = useLanguage();
+
+  // Track hero section view
+  React.useEffect(() => {
+    trackSectionView('hero');
+  }, []);
 
   return (
     <section id="main" className="bg-[#eee3d0] min-h-screen flex flex-col justify-center items-center px-6">
@@ -40,6 +47,7 @@ export const Hero = () => {
       >
         <a
           href="#portfolio"
+          onClick={() => trackButtonClick('portfolio', 'hero')}
           className="bg-[#0f0f0f] text-[#eee3d0] px-6 py-3 rounded-2xl text-lg hover:bg-[#dc3925] transition-colors duration-300 inline-block"
         >
           {t('hero.portfolio')}
@@ -47,6 +55,7 @@ export const Hero = () => {
 
         <a
           href="#contact"
+          onClick={() => trackButtonClick('contact', 'hero')}
           className="border-2 border-[#0f0f0f] px-6 py-3 rounded-2xl text-lg hover:bg-[#0f0f0f] hover:text-[#eee3d0] transition-colors duration-300 inline-block"
         >
           {t('hero.contact')}

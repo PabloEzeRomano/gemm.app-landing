@@ -1,11 +1,18 @@
 'use client';
 
+import React from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { trackContactAttempt, trackSectionView } from '@/utils/posthog';
 
 export const Contact = () => {
   const { t } = useLanguage();
   const email = process.env.NEXT_PUBLIC_EMAIL;
+
+  // Track contact section view
+  React.useEffect(() => {
+    trackSectionView('contact');
+  }, []);
 
   return (
     <section id="contact" className="py-20 px-6 text-center bg-[#103237]">
@@ -20,6 +27,7 @@ export const Contact = () => {
         </h2>
         <motion.a
           href={`mailto:${email}`}
+          onClick={() => trackContactAttempt('email')}
           className="inline-block bg-[#b3dc75]/70 text-[#0f0f0f] px-8 py-4 rounded-2xl text-lg font-bold  hover:bg-[#b3dc75] transition-colors duration-300"
           whileHover={{ scale: 1.15 }}
         >
