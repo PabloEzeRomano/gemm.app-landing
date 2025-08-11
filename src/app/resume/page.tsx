@@ -1,6 +1,5 @@
 'use client';
 
-
 import { FloatingLanguage } from '@/components/FloatingLanguage';
 import {
   Contact,
