@@ -4,11 +4,11 @@
 /// <reference types="react-dom" />
 
 declare module '*.tsx' {
-  const content: any;
+  const content: React.ComponentType<unknown>;
   export default content;
 }
 
 declare module '*.ts' {
-  const content: any;
+  const content: Record<string, unknown>;
   export default content;
 }
