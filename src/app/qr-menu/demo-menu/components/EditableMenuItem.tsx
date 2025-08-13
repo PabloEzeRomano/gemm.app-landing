@@ -1,9 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState } from 'react';
-import { Edit2, Check, X, Trash2 } from 'lucide-react';
+import { Check, Edit2, Trash2 } from 'lucide-react';
 import Image from 'next/image';
+import { useState } from 'react';
 
 interface MenuItem {
   id: string;
@@ -52,7 +52,7 @@ export default function EditableMenuItem({
     }
   };
 
-  const updateField = (field: keyof MenuItem, value: any) => {
+  const updateField = (field: keyof MenuItem, value: string[] | number | string) => {
     setTempItem(prev => ({ ...prev, [field]: value }));
   };
 
