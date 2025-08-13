@@ -4,17 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { X } from 'lucide-react';
 import { useEffect, useRef } from 'react';
-
-interface MenuItem {
-  id: string;
-  name: string;
-  description: string;
-  price: number;
-  category: string;
-  tags: string[];
-  diet: string[];
-  img: string;
-}
+import { MenuItem } from '../types';
 
 interface ItemModalProps {
   item: MenuItem | null;

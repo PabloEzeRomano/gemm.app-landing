@@ -6,6 +6,7 @@ export interface MenuItem {
   tags: string[];
   diet: string[];
   img: string;
+  description: string;
 }
 
 export interface Category {
