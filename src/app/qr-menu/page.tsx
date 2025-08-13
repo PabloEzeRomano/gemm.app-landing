@@ -39,7 +39,7 @@ export default function Landing() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-zinc-950 text-white flex flex-col items-center justify-center px-6 pt-24 pb-20">
+      <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-6 pt-24 pb-20">
         <motion.h1
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -54,7 +54,7 @@ export default function Landing() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.6 }}
-          className="text-zinc-400 mt-6 text-center max-w-xl"
+          className="text-cyan-200 mt-6 text-center max-w-xl"
         >
           Una experiencia moderna para tus clientes. Menús diseñados para
           celulares, rápidos de leer y fáciles de actualizar.
@@ -67,7 +67,7 @@ export default function Landing() {
           className="mt-10"
         >
           <button
-            className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-6 rounded-lg text-lg transition-all"
+            className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-6 rounded-lg text-lg transition-all shadow-lg hover:shadow-cyan-500/25"
             onClick={() => {
               router.push('/qr-menu/demo-menu');
             }}

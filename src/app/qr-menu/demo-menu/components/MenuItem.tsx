@@ -37,7 +37,7 @@ export default function MenuItem({ item, onItemClick }: MenuItemProps) {
         stiffness: 260,
         damping: 18,
       }}
-      className="group relative bg-white/30 backdrop-blur-sm border border-gray-200 rounded-2xl p-4 shadow-lg overflow-hidden cursor-pointer"
+      className="group relative bg-white/20 backdrop-blur-sm border border-white/30 rounded-2xl p-4 shadow-lg overflow-hidden cursor-pointer"
     >
       {/* Etiquetas animadas */}
       {tags.includes('nuevo') && (
@@ -84,7 +84,7 @@ export default function MenuItem({ item, onItemClick }: MenuItemProps) {
 
       {/* Info */}
       <div className="flex items-start justify-between gap-3">
-        <h4 className="font-bold text-gray-900 leading-tight">
+        <h4 className="font-bold text-white leading-tight">
           {name}
         </h4>
         <div className="font-black text-lg bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">

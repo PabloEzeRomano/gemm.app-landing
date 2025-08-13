@@ -12,13 +12,13 @@ export default function Navbar() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-white/50 backdrop-blur-sm"
+      className="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-sm border-b border-white/10"
     >
       <div className="max-w-4xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/qr-menu" className="flex items-center space-x-2">
             <span className="text-2xl">🍽️</span>
-            <span className="font-bold text-zinc-900">QR Menu</span>
+            <span className="font-bold text-white">QR Menu</span>
           </Link>
 
           <div className="flex items-center space-x-6">
@@ -26,8 +26,8 @@ export default function Navbar() {
               href="/qr-menu"
               className={`px-3 py-2 rounded-md transition-colors ${
                 pathname === '/qr-menu'
-                  ? 'bg-yellow-100 text-yellow-800 font-medium'
-                  : 'text-zinc-600 hover:text-zinc-900'
+                  ? 'bg-cyan-500/80 text-white font-medium'
+                  : 'text-cyan-200 hover:text-white hover:bg-white/10'
               }`}
             >
               Inicio
@@ -36,8 +36,8 @@ export default function Navbar() {
               href="/qr-menu/demo-menu"
               className={`px-3 py-2 rounded-md transition-colors ${
                 pathname === '/qr-menu/demo-menu'
-                  ? 'bg-yellow-100 text-yellow-800 font-medium'
-                  : 'text-zinc-600 hover:text-zinc-900'
+                  ? 'bg-cyan-500/80 text-white font-medium'
+                  : 'text-cyan-200 hover:text-white hover:bg-white/10'
               }`}
             >
               Demo

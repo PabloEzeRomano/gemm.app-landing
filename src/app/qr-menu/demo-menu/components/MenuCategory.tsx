@@ -49,7 +49,7 @@ export default function MenuCategory({ category, items, onItemClick }: MenuCateg
         <span className="text-3xl" aria-hidden>
           {category.icon}
         </span>
-        <h3 className="text-2xl font-bold text-gray-900 drop-shadow-lg">
+        <h3 className="text-2xl font-bold text-white drop-shadow-lg">
           {category.label}
         </h3>
       </div>
@@ -57,8 +57,8 @@ export default function MenuCategory({ category, items, onItemClick }: MenuCateg
       <motion.div
         variants={containerVariants}
         initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
+        animate="show"
+        viewport={{ once: true, amount: 0.1 }}
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
       >
         <AnimatePresence mode="wait">

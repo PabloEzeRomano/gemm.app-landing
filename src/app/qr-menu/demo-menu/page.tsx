@@ -38,7 +38,7 @@ export default function DemoMenu() {
 
   // Simula carga + animación Lottie
   useEffect(() => {
-    const t = setTimeout(() => setLoading(false), 2500);
+    const t = setTimeout(() => setLoading(false), 1000);
     return () => clearTimeout(t);
   }, []);
 
@@ -61,7 +61,7 @@ export default function DemoMenu() {
           <LoadingScreen />
         ) : (
           <motion.main
-            key="page"
+            key={`demo-menu-${filter}`}
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}

@@ -25,7 +25,7 @@ export default function FilterBar({
           className={`rounded-full px-6 py-3 text-sm font-medium transition-all duration-300 shadow-lg border backdrop-blur-md ${
             filter.key === activeFilter
               ? 'bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white border-cyan-400 shadow-cyan-500/25 scale-105'
-              : 'bg-white/20 border-white/30 text-emerald-900 hover:bg-white/40 hover:scale-105 hover:shadow-white/20 cursor-pointer'
+              : 'bg-white/20 border-white/30 text-white hover:bg-white/40 hover:scale-105 hover:shadow-white/20 cursor-pointer'
           }`}
         >
           {filter.label}

@@ -82,14 +82,14 @@ export default function ItemModal({ item, isOpen, onClose }: ItemModalProps) {
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
             className="fixed inset-4 z-50 flex items-center justify-center p-4"
           >
-            <div ref={modalRef} className="bg-white rounded-3xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-hidden">
+            <div ref={modalRef} className="bg-gray-900/95 backdrop-blur-xl rounded-3xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-hidden border border-white/20">
               {/* Header with close button */}
               <div className="relative p-6 pb-0">
                 <button
                   onClick={onClose}
-                  className="absolute z-10 top-4 right-4 p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+                  className="absolute z-10 top-4 right-4 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors border border-white/20"
                 >
-                  <X size={20} className="text-gray-600" />
+                  <X size={20} className="text-white" />
                 </button>
               </div>
 
@@ -123,7 +123,7 @@ export default function ItemModal({ item, isOpen, onClose }: ItemModalProps) {
               <div className="px-6 pb-6">
                 {/* Title and Price */}
                 <div className="flex items-start justify-between gap-4 mb-4">
-                  <h2 className="text-2xl font-bold text-gray-900 leading-tight">
+                  <h2 className="text-2xl font-bold text-white leading-tight">
                     {item.name}
                   </h2>
                   <div className="text-2xl font-black bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">
@@ -133,14 +133,14 @@ export default function ItemModal({ item, isOpen, onClose }: ItemModalProps) {
 
                 {/* Category */}
                 <div className="mb-4">
-                  <span className="text-sm text-gray-500">
+                  <span className="text-sm text-cyan-200">
                     {getCategoryLabel(item.category)}
                   </span>
                 </div>
 
                 {/* Description */}
                 <div className="mb-6">
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="text-cyan-100 leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -148,14 +148,14 @@ export default function ItemModal({ item, isOpen, onClose }: ItemModalProps) {
                 {/* Diet information */}
                 {item.diet.length > 0 && (
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-700 mb-2">
+                    <h4 className="text-sm font-semibold text-cyan-100 mb-2">
                       Información dietética
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {item.diet.map((diet) => (
                         <span
                           key={diet}
-                          className="text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full"
+                          className="text-xs bg-cyan-900/50 text-cyan-200 px-3 py-1 rounded-full border border-cyan-700/50"
                         >
                           {getDietLabel(diet)}
                         </span>
