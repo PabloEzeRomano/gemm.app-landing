@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/scam-radar(/.*)?",
+      "destination": "https://scam-radar-one.vercel.app/scam-radar$1"
+    }
+  ]
+}
